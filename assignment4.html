@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!--
 Design by TEMPLATED
@@ -27,7 +28,7 @@ Released   : 20140228
 <div id="header-wrapper">
 	<div id="header" class="container">
 		<div id="logo">
-			<h1><a href="#">StoneWork</a></h1>
+			<h1><a href="index.html">Home</a></h1>
 		</div>
 		<div id="menu">
 			<ul>
@@ -38,47 +39,52 @@ Released   : 20140228
 	</div>
 	<div id="banner" class="container">
 		<div class="title">
-			<h2>Assignment 4</h2>
-			<span class="byline">Build our web page and connect to GIT</span>
-		</div>
+		  <h2>Assignment 4</h2>
+	    <span class="byline">Eletronics Production</span></div>
 		<ul class="actions">
-			<li><a href="#" class="button">Etiam posuere</a></li>
+			<li><a href="assignments.html" class="button">Assignments</a></li>
 		</ul>
 	</div>
 </div>
 <div id="wrapper">
 	<div id="three-column" class="container">
-		<div class="title">
-			<h2>Fusce ultrices fringilla metus</h2>
-			<span class="byline">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue</span>
-		</div>
-		<div class="boxA">
-			<span class="fa fa-cloud-download"></span>
-			<p>Praesent pellentesque facilisis elit. Class aptent taciti sociosqu ad  torquent per conubia nostra.</p>
-			<a href="#" class="button button-alt">More Info</a>
-		</div>
-		<div class="boxB">
-			<span class="fa fa-cogs"></span>
-			<p>Etiam neque. Vivamus consequat lorem at nisl. Nullam  wisi a sem semper eleifend. Donec mattis.</p>
-			<a href="#" class="button button-alt">More Info</a>
-		</div>
-		<div class="boxC">
-			<span class="fa fa-wrench"></span>
-			<p> Aenean lectus lorem, imperdiet at, ultrices eget, ornare et, wisi. Pellentesque adipiscing purus.</p>
-			<a href="#" class="button button-alt">More Info</a>
-		</div>
-	</div>
-</div>
+	  <div class="title">
+	    <h2>Assignment 4</h2>
+	    <p class="body">Electronics production is the topic for week 4. I want to admit that when looking at the class schedule this week's topic was one that caused some initial stress for me. I have little real life experience with electronics and electronics production. We were asked to use one of the Fab modules to CNC a PCB board and then solder the components on to the blank board. Our first step was to order the required materials from a variety of sources. Since we are still ramping up our lab we are purchasing these materials as we go. I found the process of ordering the parts to be quite simple and found all of the materials very easy to source. While I was waiting for the materials to arrive I started to explore the process of getting the files from the original .png to the Tormach 440 pnc mill. Tormach is a local company here in Waunakee and while it is not on the preferred list of machines I find it very capable and easy to use once you have the basics down. The control software is called Path Pilot. 
+          </p>
+<p>The first step was to download the two images to convert into a .nc file our Tormach pnc 440 uses. We ran the files through the fab module. These files were downloaded off the website shown to us in class.</p>
+<div></div>
+        <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/fts_mini_traces.png">Traces</a>
+        <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/fts_mini_cut.png">Outline</a>
+      <div></div>
+<img src="images/fts_mini_traces.jpg" width="1028" height="300" alt=""/>
+      <img src="images/fts_mini_cut.jpg" width="1028" height="350" alt=""/>
+<p>In order to get our CNC files we needed to use the Fab Modules explained in class. these modules take a .png file and export them as a cnc tool path. They are really easy to use. As I mentioned before we had to wait for our end mills, PCB board and other supplies arrived so I decided to play around with the .nc files, various tooling and some donated REN shape material to see just what the mill and .nc files could do. This also gave me some practice with setting up X,Y,Z zero and changing out tooling on the mill. I used the smallest drill bit I could find in our shop to test out the file. you can see below the difference between running the trace image with the small drill bit and the actual 1/64 end mill</p>
+     <img src="images/fab-mod-cnc.jpg" width="1024" height="600" alt=""/>
+     <div></div>
+     <a href="images/fts_mini_traces (1) (1).nc">CNC File</a>
+<div></div>
+<img src="images/IMG_8505.jpg" width="256" height="128" alt=""/><img src="images/IMG_8504.jpg" width="256" height="128" alt=""/>
+<p>Once our materials arrived I attached some of the copper plated PCB board into the mill, leveled the plate and set X,Y,Z zero and started to run the traces. These end mills are small! I broke three of them trying to get the settings right on the mill. It seems that 90% of the speed and feed that was originally set for the .nc file worked perfectly. Since the tape was holding the material so well we decided to run Kayla's part next to mine to save time.</p>
+      <img src="images/IMG_8396.jpg" width="256" height="128" alt=""/><img src="images/IMG_8403.jpg" width="256" height="128" alt=""/>
+      <p>Once our traces were milled and our outlines were cut I then moved on to soldering components on to my PCB board. I had ZERO experience with this and quickly realized that slow and steady was the key to success here. One thing I noticed was that some of the components were very hard to identify the correct orientation to place it on the board. I really struggled with the LEDs a I could not see any clear marking for which way they went. After doing some research with Kayla we figured that in the right light under some magnification you can see a green line on one side of the LED letting you know which way to orient the LED on the board. After a successful smoke test we have an LED!!!!!</p>
+      <img src="images/IMG_8502.jpg" width="1056" height="256" alt=""/>
+      <img src="images/isp flash.jpg" width="1024" height="600" alt=""/> <img src="images/LED.jpg" width="1024" height="600" alt=""/>
+<p class="body">&nbsp;</p>
+      <p class="body">&nbsp;</p>
+      
+      
+
 <div id="welcome">
 	<div class="container">
 		<div class="title">
-			<h2>Fusce ultrices fringilla metus</h2>
-			<span class="byline">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue</span>
+			<h2></h2>
+			<span class="byline"></span>
 		</div>
 		<p>This is <strong>StoneWork</strong>, a free, fully standards-compliant CSS template designed by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>. The photos in this template are from <a href="http://fotogrph.com/"> Fotogrph</a>. This free template is released under the <a href="http://templated.co/license">Creative Commons Attribution</a> license, so you're pretty much free to do whatever you want with it (even use it commercially) provided you give us credit for it. Have fun :) </p>
 		<ul class="actions">
-			<li><a href="#" class="button">Etiam posuere</a></li>
-		</ul>
+		  <li><a href="#" class="button">home</a></li>
+	  </ul>
 	</div>
 </div>
 <div id="copyright" class="container">

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!--
 Design by TEMPLATED
@@ -27,7 +28,7 @@ Released   : 20140228
 <div id="header-wrapper">
 	<div id="header" class="container">
 		<div id="logo">
-			<h1><a href="#">StoneWork</a></h1>
+			<h1><a href="index.html">Home</a></h1>
 		</div>
 		<div id="menu">
 			<ul>
@@ -37,47 +38,58 @@ Released   : 20140228
 		</div>
 	</div>
 	<div id="banner" class="container">
-		<div class="title">
-			<h2>Assignment 6</h2>
-			<span class="byline">Build our web page and connect to GIT</span>
-		</div>
+		<div class="title"> <span class="byline">Electronics Design</span></div>
 		<ul class="actions">
-			<li><a href="#" class="button">Etiam posuere</a></li>
+			<li><a href="assignments.html" class="button">Assignments</a></li>
 		</ul>
 	</div>
 </div>
 <div id="wrapper">
 	<div id="three-column" class="container">
-		<div class="title">
-			<h2>Fusce ultrices fringilla metus</h2>
-			<span class="byline">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue</span>
-		</div>
-		<div class="boxA">
-			<span class="fa fa-cloud-download"></span>
-			<p>Praesent pellentesque facilisis elit. Class aptent taciti sociosqu ad  torquent per conubia nostra.</p>
-			<a href="#" class="button button-alt">More Info</a>
-		</div>
-		<div class="boxB">
-			<span class="fa fa-cogs"></span>
-			<p>Etiam neque. Vivamus consequat lorem at nisl. Nullam  wisi a sem semper eleifend. Donec mattis.</p>
-			<a href="#" class="button button-alt">More Info</a>
-		</div>
-		<div class="boxC">
-			<span class="fa fa-wrench"></span>
-			<p> Aenean lectus lorem, imperdiet at, ultrices eget, ornare et, wisi. Pellentesque adipiscing purus.</p>
-			<a href="#" class="button button-alt">More Info</a>
-		</div>
+	  <div class="title">
+	    <h2>Assignment 6</h2>
+	    <p class="body">Week six has come and gone and to date this was the most up and down week to date. Our assignment wast to redraw the Hello World Board and add in a button/switch and resistor limited LED light. After our last go around with milling electronics I was feeling confident with that portion of the assignment but little did I know there Murphy and his law would come to visit the WHS Innovation Center. It turns out that the milling portion of the assignment has proven to be the obstacle preventing me from finishing this week's homework, more on that in a bit! After the conclusion of last weeks class I started to work on the Hello World Board by viewing some of the previous years archives and get myself familiar with some of the software needed to finish the lab. I located the required components and ordered the missing components needed to complete the board. As I have mentioned before we are in a high school and working from a skeleton inventory.
+	    
+	    After doing some initial research I decided to use Eagle to layout and build the circuit. We are an Autodesk due to PLTW and had it loaded in our lab already. I must admit that using Eagle was way less stressful than what I anticipated. The first step was to add the Fab Academy library created for us from previous classes. The library contains most of the necessary parts needed to build the circuit. I would compare it to the blocks used in the older versions of AutoCad.  </p>
+	    
+      <img src="images/add-library.jpg" width="1028" height="600" alt=""/>
+      
+      <p>Once we had our library added we could start to build our circuit. To do this you need to start a new schematic file and place components by clicking "Edit" then selecting "Add". Almost all of the components were easy to find by name. When I could not locate the parts by name I actually scrolled down the list and use the visual representations to find them. Lastly there were a couple that I used to find the components. Once found you simply drag them onto the schematic.</p>
+      <img src="images/Eagle-schematic.jpg" width="1028" height="600" alt=""/><img src="images/eagle-library.jpg" width="1028" height="600" alt=""/>
+      <p>After all of the initial components are placed on the schematic it is time to start to connect the points on the components to there corresponding parts on other components using the "net" tool. You must also rename various parts of your boarding using the "name" tool and can edit the values for things like resistors using the "values" tool. </p>
+      
+      <img src="images/schematic.jpg" width="1028" height="600" alt=""/>
+      
+      <p>Once I had all of the components on the schematic and connected to each other it was time to make sure the traces were laid out correctly. To do this you need to make sure your file is saved and click on the swtitch/generate board button under the view tab </p>
+      <img src="images/change-view.jpg" width="1028" height="600" alt=""/><img src="images/trace-view.jpg" width="1028" height="600" alt=""/>
+      <p>After the traces lined up we begin the process of moving from Eagle to the mill to manufacture our boards. The process is very similar to week four in that we exported our eagle schematic as a .png file and brought it into the fab mod. The only difference this time around was that Kayla and I figured out how to turn off layers showing on our Eagle file so that all we had exporting were the traces themselves. </p>
+           <img src="images/export.jpg" width="1028" height="600" alt=""/>
+           <img src="images/fabmod.jpg" width="1028" height="600" alt=""/>
+           <img src="images/ping.jpg" width="1028" height="600" alt=""/>
+        <p class="body">As I had mentioned above I thought the most difficult part of this project was going to be getting the components laid out on the schematic as we have already milled out one board. I was wrong. Kayla and I spent hours in the lab today trying to mill our pcb boards out. We first used double sided tape to hold our PCB board material to the RenShape material we had fixtured in our vise. We ran into a bunch of issues from broken end mills to files crashing to having partial files milled out on the cnc mill. One end would mill fine and the other end would not be milled. We have some suspicions on why this is happening and have narrowed it down to the pcb board itself not being totally flat. We also moved our machine today for an event that will be held in our lab this weekend so we may have moved it out of adjustment a tiny bit. I have one of the technicians for the company who manufactures the machines coming in later this week and I will talk to him about our issues. Sadly this is the first week we have not totally completed the assignment but we will be working on that the rest of the week. We feel confident that we can get the parts milled. Stay tuned for a sucessfull update!!!! </p>
+           <div></div>
+           <p>Update!!!! We were able to successfully mill and load our boards. It seems that there were some settings that were off on the machine causing us some issues. When the mill was set up the first time the limit switches were turned off and was causing us some issues. I also decided to mill the sacrificial piece of RenShape so that it was completely flat. After attaching our PCB material to the RenShape using double sided tape we were able to successfully mill our boards!!!!!</p>
+           <img src="images/week6.jpg" width="1024" height="600" alt=""/>
+           <div></div>
+<a href="images/board with button.brd">board</a>
+          <a href="images/final version.sch">schematic</a>
+           
+           
+<p class="body">&nbsp;</p>
+      
+      
+
 	</div>
 </div>
 <div id="welcome">
 	<div class="container">
 		<div class="title">
-			<h2>Fusce ultrices fringilla metus</h2>
-			<span class="byline">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue</span>
+			<h2></h2>
+			<span class="byline"></span>
 		</div>
 		<p>This is <strong>StoneWork</strong>, a free, fully standards-compliant CSS template designed by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>. The photos in this template are from <a href="http://fotogrph.com/"> Fotogrph</a>. This free template is released under the <a href="http://templated.co/license">Creative Commons Attribution</a> license, so you're pretty much free to do whatever you want with it (even use it commercially) provided you give us credit for it. Have fun :) </p>
 		<ul class="actions">
-			<li><a href="#" class="button">Etiam posuere</a></li>
+			<li><a href="#" class="button">home</a></li>
 		</ul>
 	</div>
 </div>
