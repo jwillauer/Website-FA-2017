@@ -48,42 +48,24 @@ Released   : 20140228
 	<div id="three-column" class="container">
 	  <div class="title">
 	    <h2>Assignment 13</h2>
-	    <p class="body"> The Assignment for week 13 was to design a circuit to take advantage of an input device. For my circuit I decided to use the Arduino clone I will be using in my final project. I will be using this chip homemade chip to complete the assignment. I have tested all the coding out a commercial chip to make sure the code and LM-34 senor work before attaching it to the clone.I will have to work out programing the chip to not only talk to my input sensor I will also be asking it to communicate to an LCD screen on the output side. This circuit will be used for my final project as a visual to monitor the temerature inside the "oven" when baking my boards. The first step for me was to choose a temerature sensor that simply took basic measurements of the ambient air inside the box. </p>
+	    <p class="body"> The Assignment for week 13 was to design a circuit to take advantage of an input device. For my circuit I decided to use the Arduino clone I will be using in my final project. I will be using this chip homemade chip to complete the assignment. I have tested all the coding out a commercial chip to make sure the code and LM-34 senor work before attaching it to the clone. I will have to work out programing the chip to not only talk to my input sensor but also be asking it to communicate to an LCD screen on the output side. This circuit will be used for my final project as a visual to monitor the temerature inside the "oven" when baking my boards. The first step for me was to choose a temerature sensor that simply took basic measurements of the ambient air inside the box. For this input device I settled on a LM 34 Sensor.&nbsp;While looking around the web the LM 34 and LM 35 sensors seem to be abundant and quite cheap to source. They use 3 wires (ground, 5v and A0) and are easily attached to circuit boards and even easier to program. The only difference between the two is that the 34 reads out in Farenheit while the 35 reads out in Centigrade. Seeing as we are in the US I opted for the Farenheit model and ordered it. Here is the data sheet for it.&nbsp;While looking around the web the LM 34 and LM 35 sensors seem to be abundant and quite cheap to source. They use 3 wires (ground, 5v and A0) and are easily attached to circuit boards and even easier to program. The only difference between the two is that the 34 reads out in Farenheit while the 35 reads out in Centigrade. Seeing as we are in the US I opted for the Farenheit model and ordered it. Here is the pin out sheet for it.</p>
 	    <div></div>
-	    <p>UPDATE!!!! I did some research on the internet and found that there are two differnt fabable Arduino clones a "fabduino" design and a Satshakit version. Using Eagle and the basic list of parts I set out to fab my own Arduino Clone. I chose the Satshakit version as it seemed easier to work with. </p>
-	    <img src="images/fab-board1.jpg" width="1024" height="600" alt=""/>
+	    <img src="images/LM34-Pinout.jpg" width="1024" height="600" alt=""/>
+<div></div>
+<div></div>
+<p>Once I received my sensor I connected longer leads to the three connections using solder and then used shrink tubing on the entire lead as I wanted to keep the sensor neat as while it is inside the compartment of the hot box. Pin 1 is the 5v connection, Pin 2 is the output to the A0 pin on the arduino clone and Pin 3 is the ground. All in all the temp sensor is fairly easy to build. </p>
+<p>After constructing the sensor and lead wires I was fortunate to find some information on the internet showing me how to both connect the sensor first to Arduino and how to start looking at the code in order to make it work. Eventually once I made sure the code worked I uploaded the sketch to my clone for the final assembly. In the picture below you will see the finished sensor and the pinout sheet for connecting it to arduino. <img src="images/LM-34-wrapped.jpg" width="1028" height="600" />screen. </p>
+	    
+	    <img src="images/arduin-pins.jpg" width="1024" height="600" alt=""/>
+	    <p>Once I had the sensor connected I started to work on the code for the chip to read the LM34 and turn the analog signal into a temperature. To do this you need to convert known voltage into a corresponding temperature value. The coding looks like this in the Arduino IDE. Below you can see the sensor working in the serial monitor. I have it written to check both Fahrenheit and Celsius but in the end product it will only "print" the Fahrenheit to the LCD. </p>
+	    <img src="images/basic-temp-code.jpg" width="1028" height="600" alt=""/>
+		<img src="images/serial-montor-temp-only.jpg" width="1028" height="600" alt=""/>
 	    <div></div>
-	    <p>I next had to layout my traces and components using the board function in Eagle. Because I was using a pretty large chip I needed to make sure everything fit. </p>
-	    <img src="images/fab-board2.jpg" width="1024" height="600" alt=""/>
-	    <div></div>
-	    <p>Once the board was laid out I proceeded to use the Fab Modules as we did in Week 4 to use our Tormach CNC mill to mill out the board. This went flawlessly and the board turned out well.</p>
-	    <img src="images/test.jpg" width="1024" height="1024" alt=""/>
-	    <img src="images/traces-1.jpg" width="1024" height="1024" alt=""/>
-	    <img src="images/tormach1.jpg" width="1024" height="600" alt=""/>
-	    <img src="images/tormach2.jpg" width="1024" height="600" alt=""/>
-<p class="body">&nbsp;</p>
-	    <p>While looking around the web the LM 34 and LM 35 sensors seem to be abundant and quite cheap to source. They use 3 wires (ground, 5v and A0) and are easily attached to circuit boards and even easier to program. The only difference between the two is that the 34 reads out in Farenheit while the 35 reads out in Centigrade. Seeing as we are in the US I opted for the Farenheit model and ordered it. Here is the data sheet for it. </p>
-	    <img src="images/LM-datasheet.jpg" width="1028" height="600" alt=""/>
-	    
-	    <p>Once I received my sensor I connected longer leads to the three connections using solder, taped them and then used shrink tubing on the entire lead as I wanted to keep the sensor neat as while it is inside the compartment of the hot box. </p>
-	    
-	    
-	    
-	    <p>After constructing the sensor and lead wires I was fortunate to find some information on the internet showing me how to both connect the sensor first to our acquired Arduino Nano and how to start looking at the code in order to make it work. Eventually once I made sure the code worked I uploaded the sketch to my clone for the final assembly. In the picture below you will see more wires than needed as I was experimenting with connecting this to an LCD as well for the final project. <img src="images/LM-34-wrapped.jpg" width="1028" height="600" alt=""/>screen. </p>
-	    
-	    <img src="images/arduin-pins.jpg" width="1028" height="600" alt=""/>
-	    <img src="images/sensor-connected.jpg" width="1028" height="600" alt=""/>
-	    <p>Once I had the sensor connected I started to work on the code for the chip to read the LM34 and turn the analog signal into a temperature. To do this you need to convert known voltage into a corresponding temperature value. The coding looks like this in the Arduino IDE. After completing my own board I was able to simply load the same code from the commercial Arduino onto my fab'd board as it acted like an Arduino board.</p>
-	    <img src="images/temp-sensor-code.jpg" width="1028" height="600" alt=""/>
-	    <div></div>
-	    <a href="Files/Week 10/Temp_Sensor_Program.ino">Temp Sensor Code</a>
-<p>Once I had the code worked out I decided to give loading the code a shot and was hoping to see something on the Nano board.  Using the Arduino IDE interface I was able to watch the screen and also see the different LEDs blink on my board while it was writing to it. I was also able to easily open the serial monitor screen to see if there was any communication going on and low and behold I started to get readings once per second!!!</p>
-	    <img src="images/nano-LM.jpg" width="1028" height="600" alt=""/>
-	    <img src="images/temp-reading-1.jpg" width="1028" height="600" alt=""/>
+	    <a href="temp_sensor_file_2/temp_sensor_file_2.ino">Temp Sensor Code</a>	    
 	    <p>I wanted to see if I could use some prior coding knowledge so I tried to see if I could manipulate the reporting of the sensor to the Nano. I set it to take the temp reading once every half second instead once a second by changing the delay from 1000 to 500 milliseconds,</p>
-	    <img src="images/temp-code-2.jpg" width="1028" height="600" alt=""/>
+	    <img src="images/edited-temp-sensor-code.jpg" width="1028" height="600" alt=""/>
 	    <div></div>
-	    <a href="Files/Week 10/Temp_Sensor_Program - Copy.ino">Temp Sensor Code Edited</a>
+	    <a href="temp_sensor_file_2_edited/temp_sensor_file_2_edited.ino">Temp Sensor Code Edited</a>
 <p>The next step is to work on connecting an LCD screen to the clone/sensor so that I can have an easy to read display of what is going on in the compartment of the hot box. Later I will also explore the possiblity of a wireless transmitter so that I can monitor the system from a remote location in my house </p>
 	    
 	    <img src="images/screen.jpg" width="1028" height="600" alt=""/>

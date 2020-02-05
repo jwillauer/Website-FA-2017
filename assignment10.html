@@ -48,28 +48,34 @@ Released   : 20140228
 	<div id="three-column" class="container">
 	  <div class="title">
 	    <h2>Assignment 10</h2>
-	    <p class="body"> The Assignment for week 10 was to design a circuit to take advantage of an output device. I need to work on connecting an LCD screen to the Nano/fab board first so that I can have an easy to read display of what is going on in the compartment of the hot box. I will also explore the possiblity of a wireless transmitter so that I can monitor the system from a remote location in my house. I settled on a generic 16x2 ic2 LCD display. My goal is to have it display the hotbox temp providing a more stable reading of the actual temperature in the box. The sensor on the control module controling the heat source is actual in line with the fan to help keep the fan/heater from running constantly while it is pre-heating the box. The LM34 sensor will desplay the actual temp - once the box is preheated these sensors should read the same.</p>
+	    <p class="body"> The Assignment for week 10 was to design a circuit to take advantage of an output device and I chose to create a display for my hot box. I will work on connecting an LCD screen to my lab made arduino clone first so that I can have an easy to read display of what is going on in the compartment of the hot box.&nbsp; I settled on a generic 16x2 ic2 LCD display. My goal is to have it display the hotbox temp providing a more stable reading of the actual temperature in the box. The sensor on the control module controling the heat source is actual in line with the fan to help keep the fan/heater from running constantly while it is pre-heating the box. The LM34 sensor will desplay the actual temp - once the box is preheated these sensors should read the same (within the margin of error.</p>
 	    <h2>LCD Sceen and add on board to connect with 4 wires</h2>
+	    <p>The screen I used is simple IC2 Display. It will have two lines of text availabe with each line able to "print" 16 characters per line. My hope is to have it read "Hot Box Temp" on the first line and display the degrees on the second line. </p>
 	    <img src="images/screen.jpg" width="1028" height="600" alt=""/>
 	    <img src="images/wiring7.jpg" width="1024" height="600" alt=""/>
 	    <h2>Arduino code that will allow my board to display text</h2>
-	    <p>Before realizing that I could not use a "commercial" board in my final project I built one of the free Arduino Nano boards that were donated to our lab. After getting the wires connected to the board I was able to connect the ground, 5V,  A4 and A5 pins to the Arduino to test my code. As you can see I was successful in getting a display to appear. I was also curious so I tried to hook up my sensor (Input Device - Later Assignment) and was successful with getting a readout as well.</p>
-	    <img src="images/temp3.jpg" width="1024" height="600" alt=""/>
-	    <img src="images/temp4.jpg" width="1024" height="600" alt=""/>
+	    <p>After completing my lab created arduino board I needed to start looking at how the lcd screen actually connected to my circuit. The display has four wires that need to be connected. The SCL pin will connect to A5. The SDA pin will connect to A4. The VCC pin will connect to the 5v pin and the GND will connect to the GND on the board. The only other variable is the contrast on the back of the LCD allow to dial in brightness. After getting the wires connected to the board I was able to connect the ground, 5V,  A4 and A5 pins to the Arduino to write my code.</p>
+	    <p>When writing code for the LCD screen you need to include libraries that will allow your board to communicate with your LCD. In this instance you will need to include the LiquidCrystal and wire.h libraries. I searched the web and was able to locate the needed library for my lcd and install it. The process for doing this is quite simple. All you need to do add the zip file by going to sketch-&gt;Include library-&gt;Add zip library. After that was done I began writing the code for the lcd and upload it.</p>
+	    <img src="images/adding-a-library.jpg" width="1024" height="600" alt=""/>
+		<p>I was initially able to upload the code to my arduino but was not able to see the printed text on my LCD. After some research I found out that you need to have the correct address on the initial set up. My code was set to 0x27.&nbsp; I found some basic code that allows you to locate the address in the serial monitor. I uploaded the code and found out that my LCD address was 0x3F instead of 0x27. I edited the code and was able to upload a basic Hello World lcd sketch. I modified the lines to read Jeffs snowboard hotbox to make sure that I was understanding the coding. In arduino you need to tell the LCD which line you want to print to and which character to start on. Now that I was able to display text on my LCD. </p>
+		<img src="images/wrong-lcd-address.jpg" width="1024" height="600" alt=""/>
+	    <img src="images/Address-Scanner.jpg" width="1024" height="600" alt=""/>
+	    <div>&nbsp;</div>
+	    <p>Once I was able to locate the correct address for my LCD it was a simple fix. I was able to change the text that my LCD was printing to read&nbsp; "Snowboard Hotbox" on the first line and "Jeffs Board" on the second line. SUCCESS!!!</p>
+		<img src="images/basic-lcd-code-FA.jpg" width="1024" height="600" alt=""/>
+	    <img src="images/snowboard-hotbox-jeffs-board.jpg" width="1024" height="600" alt=""/>
+	    <div></div> 
 	    <div></div>
 	    <a href="Files/Week 13/LM35_and_LCD.ino">LCD readout code</a>
 <p>For my final project will need to get both of my input and output devices working together in the same code so that I can monitor the system with one look. Right now I am loading either the sensor or the LCD code in order to read them. Mixing the two shouldn't be too difficult as I am pretty sure it is as simple as telling the chip to "print" what the sensor is reading.</p>
 <div></div>
 <h2>UPDATE:</h2>
-<p>After Discussing this assigment with Terance I have decided to mill my own board. I have based my design off of the Satshakit found on the Fab Academy Archive site. I modified some of the traces on the schematic to allow for a better end result when milling. Some of the traces did not mill out correctly. From what I can tell they were too close for my machine to identify as seperate traces. </p>
-<img src="images/fab-board1.jpg" width="1024" height="600" alt=""/> 
-<img src="images/fab-board2.jpg" width="1024" height="600" alt=""/>
-<img src="images/test.jpg" width="1024" height="1024" alt=""/>
-<img src="images/traces-1.jpg" width="1024" height="1024" alt=""/>
-<img src="images/tormach1.jpg" width="1024" height="600" alt=""/>
-<img src="images/tormach2.jpg" width="1024" height="600" alt=""/> <img src="images/hotboxboard.jpg" width="1024" height="600" alt=""/> </div>
+<p>After Discussing this assigment with Terance I have decided to mill my own board. I have based my design off of the Satshakit found on the Fab Academy Archive site. I modified some of the traces on the schematic to allow for a better end result when milling. Some of the traces did not mill out correctly. From what I can tell they were too close for my machine to identify as seperate traces. After setting up our Tormach 440 mill and running the PCB board I was able to stuff it and bootload the program using the directions on the Satshakit site tutorial to have it run as an Arduino Uno commercial board</p>
+<img src="images/milling-arduino-clone-1.jpg" width="1024" height="600" /> 
+<img src="images/milling-arduino-clone-2.jpg" width="1024" height="600" />
+<img src="images/loading-bootloader-arduino-clone.jpg" width="1024" height="600" />
+<img src="images/bootloading.jpg" width="1024" height="600" /> </div>
 <div></div>
-<p>The final step is to load the bootloader and flash the Arduino code on to the micro controller. According to my research the chip should act like an Arduino Clone.</p>
 <div id="welcome">
 	<div class="container">
 		<div class="title">
